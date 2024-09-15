@@ -1,0 +1,55 @@
+Algoritmo CalcularTiempoTranscurrido_Hora_mintuos_segundos
+	// se establece primero las varialbes: Hora inicial, Minutos inicial, segundos inicial //
+
+	Hi <- 0
+	Mi <- 0
+	segi <- 0
+	Hf <- 0
+	Mf <- 0
+	segf <- 0
+	
+	// se piden los datos  //
+	Escribir"Digite la hora  inicial:"
+	leer Hi
+	Escribir "Digite los minutos iniciales"
+	leer Mi
+	Escribir "Digite los segundos iniciales"
+	Leer segi
+	Escribir "Digite la hora final:"
+	Leer Hf
+	Escribir "Digite los minutos finales:"
+	Leer Mf
+	Escribir "Digite los segundos finales:"
+	Leer segf
+	
+	// se establecen las condiciones//
+	Si (segf < segi) Entonces
+			segf <- segf + 60 // Si los segundos finales son menores que los segundos iniciales, entonces asignamos 60 segundos (1 minuto) a los segundos finales.
+			mf <- mf - 1 // se restan los 60 segundos prestados  (1 minuto) de los minutos finales //
+		FinSi
+		
+		Si (Mf<Mi) Entonces
+			Mf <- Mf + 60 // Si los minutos finales son menores a los minutos iniciales, entonces asignamos 60 minutos (1 hora) a los minutos finales//
+			Hf <- Hf - 1 // se restan los 60 minutos prestados (1 hora) de las horas fiales//
+	
+		FinSi
+		
+		Si (Hf < Hi) Entonces
+			Hf <- Hf + 24 // si la hora final el menor a la hora inicial, entonces se le asignan 24 horas a la hora final //
+		FinSi
+		
+		// se asigan las variables correspondientes a las operaciones//
+		Horas <- Hf - Hi
+		Minutos <- Mf - Mi
+		Segund0s <- segf - segi
+		
+		// se muestran los resultados//
+		
+		Escribir "Tiempo transcurrido:"
+		Escribir "Horas:" Horas "Minutos:" Minutos "Segundos:" Segund0s
+	
+
+		
+	
+	
+FinAlgoritmo
